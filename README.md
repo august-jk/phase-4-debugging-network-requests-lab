@@ -61,13 +61,29 @@ developing your own process.
 ## Your Notes Here
 
 - Add a new toy when the toy form is submitted
-
+NameError uninitialized constant ToysController::Toys
   - How I debugged:
+  NameError pops up when toy form submitted, NameError says uninitialized contant Toys, class should be singular not plural, checked create method in toys controller, 
+  ```
+  toy = Toys.create(toy_params)
+  ```
+  changed to singular
+  working now
 
 - Update the number of likes for a toy
-
+  unexpected end of json input error pops up
   - How I debugged:
+  added render json response in update method
+  now working
 
 - Donate a toy to Goodwill (and delete it from our database)
-
+404 not found
   - How I debugged:
+  tried deleting toy
+  404 not found error popped up
+  checked destroy method in toys controller
+  method is fine
+  checked routes 
+  missing :destroy resource
+  added
+  now working
